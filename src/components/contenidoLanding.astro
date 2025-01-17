@@ -2,55 +2,59 @@
 import { Icon } from 'astro-icon/components'
 ---
 <div class="w-full block justify-center items-center">
-    <section class="w-full flex flex-col justify-start items-center p-10">
-        <div class="flex flex-col justify-center items-center text-center w-1/2">
+    <section class="w-full flex flex-col justify-start items-center p-8">
+        <div class="flex flex-col justify-center items-center text-center lg:w-1/2">
             <h1 class="text-5xl font-bold"><span class="text-purple-500">Haz match</span> con tu próximo Roommate en Lima</h1>
             <h3 class="mt-7">¿Universidad, trabajo o nueva ciudad? En Dommies, conectamos roommates en Lima (Miraflores, San Isidro, Surco, etc) con personalidades, presupuesto, ubicación e intereses similares, para que puedas convivir en un ambiente menos conflictivo. Ah, y verificamos todos los perfiles 😊</h3>
         </div>
-        <div class="w-1/2 flex justify-center items-center my-16">
-            <button class="w-full flex justify-center items-center h-auto bg-purple-500 text-white shadow-lg p-2 mx-5 rounded-full">
+        <div class="lg:w-1/2 flex justify-center items-center my-16">
+            <a class="w-full flex justify-center items-center h-auto bg-purple-500 text-white shadow-lg p-2 px-4 lg:mx-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank">
                 Quiero encontrar mi Roommate en Lima
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-3" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                 </svg>
-            </button>
+            </a>
         </div>
         <div class="w-1/2 flex justify-center items-center">
             <div class="flex">Síguenos</div>
             <div class="flex justify-center items-center gap-3 ml-5">
-                <i class="bi bi-whatsapp cursor-pointer"></i>
-                <i class="bi bi-facebook cursor-pointer"></i>
-                <i class="bi bi-tiktok cursor-pointer"></i>
-                <i class="bi bi-instagram cursor-pointer"></i>
+                <a href="https://api.whatsapp.com/message/2QBIZN45ZCPHA1?autoload=1&app_absent=0" target="_blank"><i class="bi bi-whatsapp cursor-pointer"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61570895938953" target="_blank"><i class="bi bi-facebook cursor-pointer"></i></a>
+                <a href="https://www.tiktok.com/@dommies.pro" target="_blank"><i class="bi bi-tiktok cursor-pointer"></i></a>
+                <a href="https://www.instagram.com/Dommiess.pro/" target="_blank"><i class="bi bi-instagram cursor-pointer"></i></a>
             </div>
         </div>
-        <div class="w-3/5 h-96 flex justify-center items-center mt-5">
-            <img src="/Macbook-Mockup.webp" alt="" width="500" height="500" class="w-full" loading="lazy">
-        </div>
+        <!-- <div class="w-full h-56 md:w-3/4 md:h-96 lg:w-3/5 lg:h-96 flex justify-center items-center mt-5">
+            <img src="/Macbook-Mockup.webp" alt="" width="500" height="500" class="lg:w-full lg:h-full object-contain" loading="lazy">
+        </div> -->
+        <div class="w-full md:w-3/4 lg:w-3/5 aspect-video flex justify-center items-center mt-5">
+            <img src="/Macbook-Mockup.webp" alt="" loading="lazy" 
+                 class="w-full h-full object-contain">
+        </div>        
     </section>
     <section class="w-full flex flex-wrap justify-evenly items-center px-5 gap-5 p-2 py-5 bg-[#8A5EE2]">
-        <div class="w-52 flex flex-col justify-center items-center text-white text-center">
-            <h3 class="text-5xl mb-4 font-bold">903 perfiles</h3>
+        <div class="w-40 lg:w-52 flex flex-col justify-center items-center text-white text-center">
+            <h3 class="text-3xl lg:text-5xl mb-4 font-bold">903 perfiles</h3>
             <p class="">Analizados para el entrenamiento IA</p>
         </div>
-        <div class="w-52 flex flex-col justify-center items-center text-white text-center">
-            <h3 class="text-5xl mb-4 font-bold">71%</h3>
+        <div class="w-40 lg:w-52 flex flex-col justify-center items-center text-white text-center">
+            <h3 class="text-3xl lg:text-5xl mb-4 font-bold">71%</h3>
             <p class="">Precisión de Recomendaciones</p>
         </div>
-        <div class="w-52 flex flex-col justify-center items-center text-white text-center">
-            <h3 class="text-5xl mb-4 font-bold">4MBTI</h3>
+        <div class="w-40 lg:w-52 flex flex-col justify-center items-center text-white text-center">
+            <h3 class="text-3xl lg:text-5xl mb-4 font-bold">4MBTI</h3>
             <p class="">Enfoques de Personalidad MBTI</p>
         </div>
-        <div class="w-52 flex flex-col justify-center items-center text-white text-center">
-            <h3 class="text-5xl mb-4 font-bold">100%</h3>
+        <div class="w-40 lg:w-52 flex flex-col justify-center items-center text-white text-center">
+            <h3 class="text-3xl lg:text-5xl mb-4 font-bold">100%</h3>
             <p class="">Usuarios con validación de identidad</p>
         </div>
     </section>
-    <section class="w-full py-16 flex flex-col justify-center items-center px-36">
+    <section class="w-full py-16 flex flex-col justify-center items-center px-8 lg:px-36">
         <div class="flex flex-col justify-center items-start">
             <h1 class="w-full text-3xl font-bold mb-8 text-center">¿Es 
             <span class="text-purple-500">Dommies</span> para ti?</h1>
-            <div class="flex justify-center items-center">
+            <div class="block lg:flex justify-center items-center">
                 <div class="block justify-center items-center">
                     <p class="mb-5">¡Definitivamente sí, si te identificas con esto!:</p>
                     <div class="flex justify-center items-center ml-8">
@@ -61,21 +65,21 @@ import { Icon } from 'astro-icon/components'
                         </ul>
                     </div>
                     <div class="w-full flex justify-start items-center my-12">
-                        <button class="w-auto flex justify-center items-center h-auto bg-white text-purple-500 shadow-lg py-3 px-5 rounded-full">
+                        <a class="w-auto flex justify-center items-center h-auto bg-white text-purple-500 shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank">
                             Regístrarse Ahora
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-3" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="flex justify-center items-start">
-                    <img src="/perfil.webp" alt="" class="w-full">
+                <div class="flex md:hidden lg:flex justify-center items-start">
+                    <img src="/perfil.webp" alt="" class="w-full h-full">
                 </div>
             </div>
         </div>
-        <div class="h-auto flex flex-col justify-center items-center">
-            <img src="/perfil2.webp" alt="" class="w-full">
+        <div class="hidden md:flex flex-col justify-center items-center w-full md:w-3/4 lg:w-3/5 aspect-video">
+            <img src="/perfil2.webp" alt="" class="w-full h-full">
         </div>
     </section>
 </div>
