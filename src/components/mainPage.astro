@@ -3,7 +3,7 @@ import background from '../assets/background.svg';
 import Header from './header.jsx';
 import ContenidoLanding from './contenidoLanding.astro';
 ---
-<div class="container w-full h-screen">
+<div class="w-full h-screen">
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <!-- <Header/> -->
     <ContenidoLanding/>
@@ -17,10 +17,5 @@ import ContenidoLanding from './contenidoLanding.astro';
 		height: 100%;
 		z-index: -1;
 		filter: blur(100px);
-	}
-
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
 	}
 </style>
