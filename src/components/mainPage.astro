@@ -2,11 +2,13 @@
 import background from '../assets/background.svg';
 import Header from './header.jsx';
 import ContenidoLanding from './contenidoLanding.astro';
+import Footer from './footer.astro';
 ---
 <div class="w-full h-screen">
     <img id="background" src={background.src} alt="" fetchpriority="high" />
-    <!-- <Header/> -->
+    <Header client:load/>
     <ContenidoLanding/>
+	<Footer/>
 </div>
 <style>
     #background {
