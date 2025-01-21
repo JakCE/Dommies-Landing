@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,14 +7,33 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  // Manejar el bloqueo de scroll al abrir el menú
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // Desactiva el scroll
+    } else {
+      document.body.style.overflow = ""; // Reactiva el scroll
+    }
+  }, [isOpen]);
+
   const sections = [
-    { id: "about", label: "About" },
-    { id: "services", label: "Services" },
-    { id: "contact", label: "Contact" },
+    { id: "Encuentra-Roommate", label: "Encuentra Roommate" },
+    { id: "Features", label: "Features" },
+    { id: "Dommies", label: "Dommies" },
+    { id: "Conócenos", label: "Conócenos" },
+    { id: "FAQ", label: "FAQ" },
   ];
 
   return (
-    <header className="shadow-md  top-0 z-50">
+    <header
+      className={`shadow-md sticky top-0 z-50 ${
+        isOpen ? "bg-[#6241A0] text-white" : "bg-gray-50 text-black"
+      }`}
+    >
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
         <a href="#" className="text-2xl font-bold">
@@ -23,9 +42,10 @@ const Header = () => {
 
         {/* Botón para abrir/cerrar menú */}
         <button
-          className="lg:hidden flex items-center justify-center w-10 h-10 text-gray-800 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-500"
+          className="flex items-center justify-center w-10 h-10 rounded"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
+          aria-expanded={isOpen}
         >
           <span className="sr-only">Toggle Menu</span>
           <svg
@@ -33,9 +53,8 @@ const Header = () => {
             className={`h-6 w-6 transition-transform ${
               isOpen ? "rotate-180" : ""
             }`}
-            fill="none"
+            stroke={isOpen ? "white" : "black"}
             viewBox="0 0 24 24"
-            stroke="currentColor"
           >
             {isOpen ? (
               <path
@@ -57,16 +76,19 @@ const Header = () => {
 
         {/* Menú */}
         <nav
-          className={`lg:flex items-center gap-6 absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent lg:opacity-100 lg:visible transition-all duration-300 ${
+          className={`fixed top-[64px] left-0 w-full ${
             isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+          } h-[calc(100vh-64px)] bg-[#6241A0] text-white z-40 transition-opacity duration-300`}
+          role="menu"
         >
-          <ul className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 p-4 lg:p-0">
+          <ul className="flex flex-col items-center gap-4 p-4 h-full justify-center">
             {sections.map((section) => (
               <li key={section.id}>
                 <a
                   href={`#${section.id}`}
-                  className="text-gray-800 hover:text-blue-500 font-medium transition"
+                  className="hover:text-blue-500 font-medium transition"
+                  role="menuitem"
+                  onClick={closeMenu} // Cierra el menú al hacer clic
                 >
                   {section.label}
                 </a>
