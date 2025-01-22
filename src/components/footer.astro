@@ -1,14 +1,106 @@
-<div class="w-full flex justify-center items-center">
-    <hr class="w-[90%] h-1 x-12 mt-24 border-purple-800">
-</div>
-<footer class="w-full flex justify-between items-center p-12 font-bold">
-    <div class="w-full text-purple-800">
-        <img src="/logo.png" alt="" class="mb-3">
-        <p class="">Copyright: ©2024 Dommies Startup</p>
+---
+const sections = [
+    { id: "Encuentra-Roommate", label: "Encuentra Roommate" },
+    { id: "Features", label: "Features" },
+    { id: "Dommies", label: "Dommies" },
+    { id: "Conócenos", label: "Conócenos" },
+    { id: "FAQ", label: "FAQ" },
+];
+const contacts = [
+    "dommies.service@gmail.com",
+    "+51 901 543 058"
+]
+const follow = [
+    {
+        enlace: 'https://api.whatsapp.com/message/2QBIZN45ZCPHA1?autoload=1&app_absent=0',
+        RS: 'WhatsApp'
+    },
+    {
+        enlace: 'https://www.facebook.com/profile.php?id=61570895938953',
+        RS: 'Facebook'
+    },
+    {
+        enlace: 'https://www.tiktok.com/@dommies.pro',
+        RS: 'TikTok'
+    },
+    {
+        enlace: 'https://www.instagram.com/Dommiess.pro/',
+        RS: 'Instagram'
+    },
+]
+const polit = [
+    "Términos y condiciones",
+    "Privacidad"
+]
+---
+
+<footer class="w-full flex flex-col px-16 pt-16 bg-[#6241A0] text-white mt-20 font-thin text-sm">
+    <div class="w-[95%] flex justify-start items-start gap-8">
+        <div class="flex flex-col justify-center items-start">
+            <img src="/logo.png" alt="" class="mb-3">
+            <p class="">Ejemplo de texto descriptivo Dommies.</p>
+        </div>
+        <div class="flex flex-col justify-center items-start">
+            <h1 class="font-semibold my-3">Explorar</h1>
+            <div class="flex flex-col justify-center items-start gap-2">
+                {sections.map((section) => (
+                    <a
+                        href={`#${section.id}`}
+                        class="hover:underline transition"
+                    >
+                        {section.label}
+                    </a>
+                ))}
+            </div>
+        </div>
+        <div class="flex flex-col justify-start items-start">
+            <h1 class="font-semibold my-3">Contáctanos</h1>
+            <div class="flex flex-col justify-center items-start gap-2">
+                {contacts.map((section) => (
+                    <a
+                        href={`#`}
+                        class="transition"
+                    >
+                        {section}
+                    </a>
+                ))}
+            </div>
+        </div>
+        <div class="flex flex-col justify-start items-start">
+            <h1 class="font-semibold my-3">Síguenos</h1>
+            <div class="flex flex-col justify-center items-start gap-2">
+                {follow.map((section) => (
+                    <a
+                        href={`${section.enlace}`}
+                        target="_blank"
+                        class="hover:underline transition"
+                    >
+                        {section.RS}
+                    </a>
+                ))}
+            </div>
+        </div>
+        <div class="flex flex-col justify-start items-start">
+            <h1 class="font-semibold my-3">Legal</h1>
+            <div class="flex flex-col justify-center items-start gap-2">
+                {polit.map((section) => (
+                    <a
+                        href={``}
+                        target="_blank"
+                        class="hover:underline transition"
+                    >
+                        {section}
+                    </a>
+                ))}
+            </div>
+        </div>
     </div>
-    <div class="w-full">
+    <div class="my-8">
+        <p class=""> © 2025 Dommies. Todos los derechos reservados.</p>
+    </div>
+    <!-- <div class="">
         <div class="w-full flex flex-col justify-center items-center">
-            <div class="flex mb-5 text-purple-800">Síguenos</div>
+            <div class="flex mb-5">Síguenos</div>
             <div class="flex justify-center items-center gap-7 ml-5">
                 <a href="https://api.whatsapp.com/message/2QBIZN45ZCPHA1?autoload=1&app_absent=0" target="_blank" aria-label="Enviar un mensaje por WhatsApp"><i class="bi bi-whatsapp cursor-pointer"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61570895938953" target="_blank" aria-label="Visitar nuestra página de Facebook"><i class="bi bi-facebook cursor-pointer"></i></a>
@@ -16,5 +108,5 @@
                 <a href="https://www.instagram.com/Dommiess.pro/" target="_blank" aria-label="Visitar nuestro perfil de Instagram"><i class="bi bi-instagram cursor-pointer"></i></a>
             </div>
         </div>
-    </div>
+    </div> -->
 </footer>
