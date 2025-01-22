@@ -37,12 +37,12 @@ const polit = [
 <footer class="w-full flex flex-col px-16 pt-16 bg-[#6241A0] text-white mt-20 font-thin text-sm">
     <div class="w-[95%] block justify-center items-center md:flex md:justify-start md:items-start gap-8">
         <div class="flex flex-col justify-center items-center md:items-start">
-            <img src="/logo.png" alt="" class="mb-3">
-            <p class="">Ejemplo de texto descriptivo Dommies.</p>
+            <img src="/Logoheader.webp" alt="" class="w-[12rem] mb-3">
+            <p class="">Dommies: Tu roommate perfecto, en tu lugar perfecto.</p>
         </div>
         <div class="flex flex-col justify-center items-center md:items-start">
-            <h1 class="font-semibold my-3">Explorar</h1>
-            <div class="flex flex-col justify-center items-start gap-2">
+            <h1 class="font-semibold my-8 md:my-3">Explorar</h1>
+            <div class="flex flex-col justify-center items-center md:items-start gap-2">
                 {sections.map((section) => (
                     <a
                         href={`#${section.id}`}
@@ -54,11 +54,11 @@ const polit = [
             </div>
         </div>
         <div class="flex flex-col justify-start items-center md:items-start">
-            <h1 class="font-semibold my-3">Contáctanos</h1>
-            <div class="flex flex-col justify-center items-start gap-2">
+            <h1 class="font-semibold my-8 md:my-3">Contáctanos</h1>
+            <div class="flex flex-col justify-center items-center md:items-start gap-2">
                 {contacts.map((section) => (
                     <a
-                        href={`#`}
+                        href={``}
                         class="transition"
                     >
                         {section}
@@ -67,8 +67,8 @@ const polit = [
             </div>
         </div>
         <div class="flex flex-col justify-start items-center md:items-start">
-            <h1 class="font-semibold my-3">Síguenos</h1>
-            <div class="flex flex-col justify-center items-start gap-2">
+            <h1 class="font-semibold my-8 md:my-3">Síguenos</h1>
+            <div class="flex flex-col justify-center items-center md:items-start gap-2">
                 {follow.map((section) => (
                     <a
                         href={`${section.enlace}`}
@@ -81,8 +81,8 @@ const polit = [
             </div>
         </div>
         <div class="flex flex-col justify-start items-center md:items-start">
-            <h1 class="font-semibold my-3">Legal</h1>
-            <div class="flex flex-col justify-center items-start gap-2">
+            <h1 class="font-semibold my-8 md:my-3">Legal</h1>
+            <div class="flex flex-col justify-center items-center md:items-start gap-2">
                 {polit.map((section) => (
                     <a
                         href={``}

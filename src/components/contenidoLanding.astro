@@ -1,5 +1,6 @@
 ---
 import Accordion from "../components/accordionFAQ.jsx";
+import CounterSection from "./bannerCount";
 ---
 <style>
     html {
@@ -34,7 +35,8 @@ import Accordion from "../components/accordionFAQ.jsx";
                  class="w-full h-full object-contain">
         </div>        
     </section>
-    <section id="" class="w-full flex flex-wrap justify-evenly items-center px-5 gap-5 p-2 py-5 bg-purple-800">
+    <CounterSection client:load/>
+    <!-- <section id="" class="w-full flex flex-wrap justify-evenly items-center px-5 gap-5 p-2 py-5 bg-purple-800">
         <div class="w-40 lg:w-52 flex flex-col justify-center items-center text-white text-center">
             <h1 class="text-3xl lg:text-5xl mb-4 font-bold">903 perfiles</h1>
             <p class="">Analizados para el entrenamiento IA</p>
@@ -51,7 +53,7 @@ import Accordion from "../components/accordionFAQ.jsx";
             <h1 class="text-3xl lg:text-5xl mb-4 font-bold">100%</h1>
             <p class="">Usuarios con validación de identidad</p>
         </div>
-    </section>
+    </section> -->
     <section class="w-full py-16 flex flex-col justify-center items-center px-8 lg:px-36">
         <div class="flex flex-col justify-center items-start">
             <h1 class="w-full text-3xl font-bold mb-8 text-center">¿Es 
