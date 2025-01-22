@@ -3,13 +3,14 @@ import background from '../assets/background.svg';
 import Header from './header.jsx';
 import ContenidoLanding from './contenidoLanding.astro';
 import Footer from './footer.astro';
-
+import ScrollToTop from './ScrollToTop.jsx'
 ---
 <div class="w-full h-screen">
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <Header client:load/>
     <ContenidoLanding/>
 	<Footer/>
+	<ScrollToTop client:load/>
 </div>
 <style>
     #background {
