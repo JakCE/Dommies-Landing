@@ -35,12 +35,12 @@ const polit = [
 ---
 
 <footer class="w-full flex flex-col px-16 pt-16 bg-[#6241A0] text-white mt-20 font-thin text-sm">
-    <div class="w-[95%] block justify-center items-center md:flex md:justify-start md:items-start gap-8">
-        <div class="flex flex-col justify-center items-center md:items-start">
-            <img src="/Logoheader.webp" alt="" class="w-[12rem] mb-3">
-            <p class="">Dommies: Tu roommate perfecto, en tu lugar perfecto.</p>
+    <div class="w-[95%] block justify-center items-center md:flex md:justify-start md:items-start gap-8 lg:gap-16 lg:justify-between">
+        <div class="flex flex-col justify-center items-center md:items-start lg:w-1/5">
+            <img src="/Logoheader.webp" alt="Logo de Dommies" class="w-[12rem] mb-3">
+            <p>Dommies: Tu roommate perfecto, en tu lugar perfecto.</p>
         </div>
-        <div class="flex flex-col justify-center items-center md:items-start">
+        <div class="flex flex-col justify-center items-center md:items-start lg:w-1/5">
             <h1 class="font-semibold my-8 md:my-3">Explorar</h1>
             <div class="flex flex-col justify-center items-center md:items-start gap-2">
                 {sections.map((section) => (
@@ -53,26 +53,22 @@ const polit = [
                 ))}
             </div>
         </div>
-        <div class="flex flex-col justify-start items-center md:items-start">
+        <div class="flex flex-col justify-start items-center md:items-start lg:w-1/5">
             <h1 class="font-semibold my-8 md:my-3">Contáctanos</h1>
             <div class="flex flex-col justify-center items-center md:items-start gap-2">
-                {contacts.map((section) => (
-                    <a
-                        href={``}
-                        class="transition"
-                    >
-                        {section}
-                    </a>
+                {contacts.map((contact) => (
+                    <p class="transition">{contact}</p>
                 ))}
             </div>
         </div>
-        <div class="flex flex-col justify-start items-center md:items-start">
+        <div class="flex flex-col justify-start items-center md:items-start lg:w-1/5">
             <h1 class="font-semibold my-8 md:my-3">Síguenos</h1>
             <div class="flex flex-col justify-center items-center md:items-start gap-2">
                 {follow.map((section) => (
                     <a
                         href={`${section.enlace}`}
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="hover:underline transition"
                     >
                         {section.RS}
@@ -80,13 +76,14 @@ const polit = [
                 ))}
             </div>
         </div>
-        <div class="flex flex-col justify-start items-center md:items-start">
+        <div class="flex flex-col justify-start items-center md:items-start lg:w-1/5">
             <h1 class="font-semibold my-8 md:my-3">Legal</h1>
             <div class="flex flex-col justify-center items-center md:items-start gap-2">
                 {polit.map((section) => (
                     <a
-                        href={``}
+                        href="#"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="hover:underline transition"
                     >
                         {section}
@@ -95,18 +92,8 @@ const polit = [
             </div>
         </div>
     </div>
-    <div class="my-8">
-        <p class=""> © 2025 Dommies. Todos los derechos reservados.</p>
+    <div class="my-8 flex justify-center md:justify-start lg:justify-between w-[95%]">
+        <p>© 2025 Dommies. Todos los derechos reservados.</p>
+        <p class="hidden lg:block">Desarrollado con ❤️ por Dommies Team</p>
     </div>
-    <!-- <div class="">
-        <div class="w-full flex flex-col justify-center items-center">
-            <div class="flex mb-5">Síguenos</div>
-            <div class="flex justify-center items-center gap-7 ml-5">
-                <a href="https://api.whatsapp.com/message/2QBIZN45ZCPHA1?autoload=1&app_absent=0" target="_blank" aria-label="Enviar un mensaje por WhatsApp"><i class="bi bi-whatsapp cursor-pointer"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61570895938953" target="_blank" aria-label="Visitar nuestra página de Facebook"><i class="bi bi-facebook cursor-pointer"></i></a>
-                <a href="https://www.tiktok.com/@dommies.pro" target="_blank" aria-label="Visitar nuestra cuenta de TikTok"><i class="bi bi-tiktok cursor-pointer"></i></a>
-                <a href="https://www.instagram.com/Dommiess.pro/" target="_blank" aria-label="Visitar nuestro perfil de Instagram"><i class="bi bi-instagram cursor-pointer"></i></a>
-            </div>
-        </div>
-    </div> -->
 </footer>
