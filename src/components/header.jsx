@@ -37,7 +37,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
         <a href="#" className="text-2xl font-bold">
-          <img src={isOpen ? "/Logoheader.webp" : "/Logoheader.webp"} alt="Logo" className="h-10 p-1 rounded-md bg-[#6241A0]" />
+          <img src={isOpen ? "/Logoheader.webp" : "/Dommies1.webp"} alt="Logo" className="h-10 p-1 rounded-md" />
         </a>
 
         {/* Botón para abrir/cerrar menú */}
