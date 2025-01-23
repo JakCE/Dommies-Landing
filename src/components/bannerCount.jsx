@@ -26,7 +26,7 @@ const CounterSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full flex flex-wrap justify-evenly items-center px-5 gap-5 p-2 py-5 bg-purple-800"
+      className="w-full flex flex-wrap justify-evenly items-center px-5 gap-5 p-2 py-5 bg-[#6241A0]"
     >
       {counters.map((counter) => (
         <Counter

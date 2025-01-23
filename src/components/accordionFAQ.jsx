@@ -74,14 +74,14 @@ const Accordion = () => {
   ];
 
   return (
-    <div className="w-full max-w-md mx-auto mt-10 space-y-4">
+    <div className="w-full max-w-full mx-auto mt-10 space-y-4">
       {items.map((item, index) => (
         <div
           key={index}
-          className="border border-purple-800 rounded-md shadow-sm"
+          className="border border-[#6241A0] rounded-md shadow-sm"
         >
           <button
-            className="w-full flex justify-between items-center rounded-sm px-4 py-3 bg-transparent text-left text-purple-800 font-medium transition"
+            className="w-full flex justify-between items-center rounded-sm px-4 py-3 bg-transparent text-left text-[#6241A0] font-medium transition"
             onClick={() => toggleAccordion(index)}
           >
             {item.title}

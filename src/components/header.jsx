@@ -37,12 +37,16 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
         <a href="#" className="text-2xl font-bold">
-          <img src={isOpen ? "/Logoheader.webp" : "/Dommies1.webp"} alt="Logo" className="h-10 p-1 rounded-md" />
+          <img
+            src={isOpen ? "/Logoheader.webp" : "/Dommies1.webp"}
+            alt="Logo"
+            className="h-10 p-1 rounded-md"
+          />
         </a>
 
         {/* Botón para abrir/cerrar menú */}
         <button
-          className="flex items-center justify-center w-10 h-10 rounded"
+          className="flex lg:hidden items-center justify-center w-10 h-10 rounded"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
           aria-expanded={isOpen}
@@ -76,19 +80,19 @@ const Header = () => {
 
         {/* Menú */}
         <nav
-          className={`fixed top-[64px] left-0 w-full ${
+          className={`fixed top-[64px] left-0 w-full lg:static lg:w-auto ${
             isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          } h-[calc(100vh-64px)] bg-[#6241A0] text-white z-40 transition-opacity duration-300`}
+          } lg:opacity-100 lg:visible h-[calc(100vh-64px)] lg:h-auto bg-[#6241A0] lg:bg-transparent text-white lg:text-black z-40 transition-opacity duration-300 lg:flex`}
           role="menu"
         >
-          <ul className="flex flex-col items-center gap-4 p-4 h-full justify-center">
+          <ul className="flex flex-col lg:flex-row items-center gap-4 p-4 lg:p-0 h-full lg:h-auto justify-center lg:justify-end lg:text-[#6241A0]">
             {sections.map((section) => (
               <li key={section.id}>
                 <a
                   href={`#${section.id}`}
-                  className="hover:text-blue-500 font-medium transition"
+                  className={`lg:hover:bg-[#6241A0] lg:hover:text-white font-medium transition px-4 py-2 lg:rounded-full`}
                   role="menuitem"
-                  onClick={closeMenu} // Cierra el menú al hacer clic
+                  onClick={closeMenu} // Cierra el menú al hacer clic en móviles
                 >
                   {section.label}
                 </a>
