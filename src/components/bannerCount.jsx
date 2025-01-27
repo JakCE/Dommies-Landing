@@ -28,6 +28,7 @@ const CounterSection = () => {
       ref={sectionRef}
       className="w-full flex flex-wrap justify-evenly items-center px-5 gap-5 p-2 py-5 bg-[#6241A0]"
     >
+      <div className="container mx-auto w-full flex flex-wrap justify-evenly items-center px-5 gap-5 p-2 py-5">
       {counters.map((counter) => (
         <Counter
           key={counter.id}
@@ -37,6 +38,7 @@ const CounterSection = () => {
           suffix={counter.suffix || ""}
         />
       ))}
+      </div>
     </section>
   );
 };
