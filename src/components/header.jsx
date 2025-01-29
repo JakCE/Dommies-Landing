@@ -30,8 +30,8 @@ const Header = () => {
 
   return (
     <header
-      className={`shadow-md sticky top-0 z-50 ${
-        isOpen ? "bg-[#6241A0] text-white" : "bg-gray-50 text-black"
+      className={`sticky top-0 z-50 ${
+        isOpen ? "bg-[#6241A0] text-white" : "bg-gray-50 text-black shadow-md"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4 py-3">

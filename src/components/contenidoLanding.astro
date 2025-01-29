@@ -1,6 +1,11 @@
 ---
 import Accordion from "../components/accordionFAQ.jsx";
 import CounterSection from "./bannerCount";
+import ButtonL from "./buttonL.astro";
+import FormReg from "./formReg.astro";
+
+const hrefButton = "https://wa.me/message/TZKYFTLFYE5OJ1"
+//const hrefButton = "https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform"
 ---
 <style>
     html {
@@ -8,54 +13,32 @@ import CounterSection from "./bannerCount";
     }
 </style>
 <div class="w-full block justify-center items-center mt-7">
-    <!-- <section id="Encuentra-Roommate" class="w-full flex flex-col justify-start items-center p-8">
-        <div class="flex flex-col justify-center items-center text-center lg:w-1/2">
-            <h1 class="text-5xl font-bold"><span class="text-[#6241A0]">Haz match</span> con tu próximo Roommate en Lima</h1>
-            <p class="mt-7">¿Universidad, trabajo o nueva ciudad? En Dommies, conectamos roommates en Lima (Miraflores, San Isidro, Surco, etc) con personalidades, presupuesto, ubicación e intereses similares, para que puedas convivir en un ambiente menos conflictivo. Ah, y verificamos todos los perfiles 😊</p>
-        </div>
-        <div class="lg:w-1/2 flex justify-center items-center my-16">
-            <a class="w-full flex justify-center items-center h-auto bg-[#6241A0] text-white shadow-lg p-2 px-4 lg:mx-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank">
-                Quiero encontrar mi Roommate en Lima
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-3" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                </svg>
-            </a>
-        </div>
-        <div class="w-1/2 flex justify-center items-center">
-            <div class="flex">Síguenos</div>
-            <div class="flex justify-center items-center gap-3 ml-5">
-                <a href="https://api.whatsapp.com/message/2QBIZN45ZCPHA1?autoload=1&app_absent=0" target="_blank" aria-label="Enviar un mensaje por WhatsApp"><i class="bi bi-whatsapp cursor-pointer"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61570895938953" target="_blank" aria-label="Visitar nuestra página de Facebook"><i class="bi bi-facebook cursor-pointer"></i></a>
-                <a href="https://www.tiktok.com/@dommies.pro" target="_blank" aria-label="Visitar nuestra cuenta de TikTok"><i class="bi bi-tiktok cursor-pointer"></i></a>
-                <a href="https://www.instagram.com/Dommiess.pro/" target="_blank" aria-label="Visitar nuestro perfil de Instagram"><i class="bi bi-instagram cursor-pointer"></i></a>
-            </div>
-        </div>
-        <div class="w-full md:w-3/4 lg:w-3/5 aspect-video flex justify-center items-center mt-5">
-            <img src="/Macbook-Mockup.webp" alt="" loading="lazy" 
-                 class="w-full h-full object-contain">
-        </div>        
-    </section> -->
     <section id="Encuentra-Roommate" class="container mx-auto w-full flex flex-col justify-start items-center p-8">
-        <div class="w-full flex flex-col xl:flex-row justify-center items-center text-center xl:text-left xl:justify-between xl:items-start xl:gap-8 lg:w-full px-8 lg:px-36">
+        <div class="w-full flex flex-col xl:flex-row justify-center items-center text-center xl:text-left xl:justify-between xl:items-center xl:gap-8 lg:w-full md:px-8 lg:px-36">
             <!-- Contenedor de texto -->
-            <div class="flex flex-col justify-center items-center xl:items-start xl:w-1/2">
+            <div class="w-full mx-auto flex flex-col justify-center items-center xl:items-start xl:w-1/2">
                 <h1 class="text-5xl font-bold">
                     <span class="text-[#6241A0]">Haz match</span> con tu próximo Roommate en Lima
                 </h1>
                 <p class="mt-7">
                     ¿Universidad, trabajo o nueva ciudad? En Dommies, conectamos roommates en Lima (Miraflores, San Isidro, Surco, etc) con personalidades, presupuesto, ubicación e intereses similares, para que puedas convivir en un ambiente menos conflictivo. Ah, y verificamos todos los perfiles 😊
                 </p>
-                <div class="lg:w-full flex justify-center items-center my-8">
-                    <a class="w-auto flex justify-center items-center bg-[#6241A0] text-white shadow-lg p-3 px-6 lg:mx-5 rounded-full hover:scale-105 transition-transform duration-300 whitespace-nowrap" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" rel="noopener noreferrer">
+                <div class="w-full flex justify-center items-center my-12">
+                    <!-- <a class="w-auto flex justify-center items-center h-auto bg-[#6241A0] text-white shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" aria-label="">
                         Quiero encontrar mi Roommate en Lima
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-3" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                         </svg>
-                    </a>
+                    </a> -->
+                    <ButtonL
+                        text="Quiero encontrar mi Roommate en Lima"
+                        href={hrefButton}
+                        icon={true}
+                    />
                 </div>
                 <div class="flex justify-center xl:justify-start items-center mt-5">
-                    <div class="flex">Síguenos</div>
-                    <div class="flex justify-center items-center gap-3 ml-5">
+                    <div class="flex text-lg">Síguenos</div>
+                    <div class="flex justify-center items-center gap-3 ml-5 text-2xl">
                         <a href="https://wa.me/message/TZKYFTLFYE5OJ1" target="_blank" rel="noopener noreferrer" aria-label="Enviar un mensaje por WhatsApp"><i class="bi bi-whatsapp cursor-pointer"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61570895938953" target="_blank" rel="noopener noreferrer" aria-label="Visitar nuestra página de Facebook"><i class="bi bi-facebook cursor-pointer"></i></a>
                         <a href="https://www.tiktok.com/@dommies.pro" target="_blank" rel="noopener noreferrer" aria-label="Visitar nuestra cuenta de TikTok"><i class="bi bi-tiktok cursor-pointer"></i></a>
@@ -65,7 +48,7 @@ import CounterSection from "./bannerCount";
             </div>
     
             <!-- Contenedor de imagen -->
-            <div class="w-full md:w-3/4 lg:w-3/5 xl:w-1/2 flex justify-center items-center mt-5 xl:mt-0">
+            <div class="w-full md:w-3/4 xl:pl-10 lg:w-3/5 xl:w-1/2 flex justify-center items-center mt-5 xl:mt-0">
                 <!-- <img src="/Macbook-Mockup.webp" alt="Mockup de Dommies en una Macbook" loading="lazy" 
                      class="w-full h-auto max-w-[90%] max-h-[90vh] object-contain"> -->
                 <img src="/Macbook-Mockup.webp" alt="Mockup de Dommies en una Macbook" loading="lazy" 
@@ -74,7 +57,6 @@ import CounterSection from "./bannerCount";
             </div>
         </div>
     </section>
-    
     <CounterSection client:load/>
     <section class="container mx-auto w-full py-16 flex flex-col justify-center items-center px-8 lg:px-36">
         <div class="flex flex-col justify-center items-start">
@@ -91,12 +73,17 @@ import CounterSection from "./bannerCount";
                         </ul>
                     </div>
                     <div class="w-full flex justify-start items-center my-12">
-                        <a class="w-auto flex justify-center items-center h-auto bg-white text-[#6241A0] shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" aria-label="">
+                        <!-- <a class="w-auto flex justify-center items-center h-auto bg-white text-[#6241A0] shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" aria-label="">
                             Regístrarse Ahora
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-3" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
-                        </a>
+                        </a> -->
+                        <ButtonL
+                            text="Regístrarse Ahora" 
+                            href={hrefButton}
+                            icon={true} 
+                        />
                     </div>
                 </div>
                 <div class="flex md:hidden lg:flex justify-center items-start">
@@ -114,12 +101,17 @@ import CounterSection from "./bannerCount";
             <p class="">¿Eres el alma de las fiestas 🎉 o prefieres noches tranquilas en casa 🍿? ¿Te identificas dentro de una Comunidad? ¿Extrovertido 🗣️ o introvertido 🛋️? Ya sea que ames madrugar con café ☕ o trabajar hasta tarde 🌙, hay un Roommate ideal para ti en Lima. ¿Tienes una mascota 🐶🐱 o prefieres un espacio libre de mascotas? ¿Eres planta lover 🌿 y relajado, o prefieres un ambiente limpio 🧼? ¿Cristiano ✝️, católico ⛪ o neutral ⚖️? ¿Te gusta todo impecable 🧹 o eres más relajado? Dommies te ayuda a encontrar un compañero que respete y complemente tus hábitos y estilo de vida, para una convivencia positiva y sin conflictos.</p>
         </div>
         <div class="w-full flex justify-center items-center my-12">
-            <a class="w-auto flex justify-center items-center h-auto bg-white text-[#6241A0] shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" aria-label="">
+            <!-- <a class="w-auto flex justify-center items-center h-auto bg-white text-[#6241A0] shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" aria-label="">
                 Descubre tu compatibilidad
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-3" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                 </svg>
-            </a>
+            </a> -->
+            <ButtonL
+                text="Descubre tu compatibilidad" 
+                href={hrefButton}
+                icon={true} 
+            />
         </div>
         <div class="w-full flex flex-wrap justify-center items-center gap-3">
             <div class="w-[22rem] flex justify-center items-center flex-col bg-purple-200 rounded-xl transform transition-transform duration-500 ease-in-out hover:-translate-y-2">
@@ -128,7 +120,7 @@ import CounterSection from "./bannerCount";
                         <img src="/card1.webp" alt="" class="w-20 h-auto">
                     </div>
                     <div class="flex flex-col justify-center items-center">
-                        <h1 class="text-lg text-[#6241A0] font-bold mb-3">Conoce a tu roommie Antes 🙌</h1>
+                        <h1 class="text-lg text-center text-[#6241A0] font-bold mb-3">Conoce a tu roommie Antes 🙌</h1>
                         <p class="text-center">¿Te suena convivir con alguien que deja todo desordenado o no respeta tus horarios? En Dommies, ves perfiles completos incluyendo sus hábitos. Así, te aseguramos matches con personas compatibles en Lima y te ahorramos sorpresas incómodas.</p>
                     </div>
                 </div>
@@ -140,7 +132,7 @@ import CounterSection from "./bannerCount";
                         <img src="/card2.webp" alt="" class="w-20 h-auto">
                     </div>
                     <div class="flex flex-col justify-center items-center">
-                        <h1 class="text-lg text-[#6241A0] font-bold mb-3">Convivencia sin sorpresas 🧠</h1>
+                        <h1 class="text-lg text-center text-[#6241A0] font-bold mb-3">Convivencia sin sorpresas 🧠</h1>
                         <p class="text-center">¿Temes terminar con alguien que no respeta tus espacios o que simplemente no encaja contigo? Nuestro test de personalidad analiza quién eres para encontrar roommates compatibles en Lima con los que puedas convivir de manera menos conflictiva.</p>
                     </div>
                 </div>
@@ -152,7 +144,7 @@ import CounterSection from "./bannerCount";
                         <img src="/card3.webp" alt="" class="w-20 h-auto">
                     </div>
                     <div class="flex flex-col justify-center items-center">
-                        <h1 class="text-lg text-[#6241A0] font-bold mb-3">Busca rápido y sin estrés🚀</h1>
+                        <h1 class="text-lg text-center text-[#6241A0] font-bold mb-3">Busca rápido y sin estrés🚀</h1>
                         <p class="text-center">Nada de semanas buscando entre perfiles vacíos o hablando con personas que no coinciden contigo. Dommies filtra a los mejores roommates en Lima en base a tus necesidades y asegura que sean confiables y verificables.</p>
                     </div>
                 </div>
@@ -164,7 +156,7 @@ import CounterSection from "./bannerCount";
                         <img src="/card4.webp" alt="" class="w-20 h-auto">
                     </div>
                     <div class="flex flex-col justify-center items-center">
-                        <h1 class="text-lg text-[#6241A0] font-bold mb-3">👀 No es solo la vivienda</h1>
+                        <h1 class="text-lg text-center text-[#6241A0] font-bold mb-3">👀 No es solo la vivienda</h1>
                         <p class="text-center">¿Te enfocas en encontrar una vivienda y a la suerte para que tu roommate no sea un desastre? En Dommies, queremos que tu convivencia sea algo que disfrutes, como bromas en la cocina, consejos y compartir buenos momentos con Roommates en Lima.</p>
                     </div>
                 </div>
@@ -177,41 +169,59 @@ import CounterSection from "./bannerCount";
             <h1 class="w-full lg:px-24 text-3xl font-bold mb-8 text-center"><span class="text-[#6241A0]">Descubre Dommies:</span> Filtros inteligentes</h1>
             <p class="lg:px-20">Conoce nuestras primeras 5 razones por las que Dommies hará tu búsqueda de Roommates en Lima más fácil. ¡Todo en un solo lugar!</p>
         </div>
-        <div class="w-full flex flex-wrap justify-center items-center gap-4 my-8">
-            <div class="w-full m-4 md:m-0 md:w-56 h-[36rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 my-8 justify-items-center">
+            <div class="w-full m-4 md:m-0 h-[36rem] xl:h-[40rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
                 <img src="/price.webp" alt="" class="w-48">
                 <h1 class="text-lg font-bold text-[#6241A0] my-6">💸Filtro Presupuesto</h1>
                 <p class="text-center">
                     Conéctate con personas que comparten un rango de presupuesto similar al tuyo en Lima. Así, aseguras una convivencia más alineada y sin preocupaciones económicas.
                 </p>
             </div>
-            <div class="w-full m-4 md:m-0 md:w-56 h-[36rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
+            <div class="w-full m-4 md:m-0 h-[36rem] xl:h-[40rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
                 <img src="/ubicacion.webp" alt="" class="w-48">
                 <h1 class="text-lg font-bold text-[#6241A0] my-6">📍 Filtro de Ubicación</h1>
                 <p class="text-center">
                     Encuentra compañeros interesados en vivir cerca de tu universidad, trabajo o en esa zona de Miraflores, San Isidro, San Miguel, etc. que siempre has querido. Dommies conecta preferencias para una ubicación conveniente para ambos.
                 </p>
             </div>
-            <div class="w-full m-4 md:m-0 md:w-56 h-[36rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
+            <div class="w-full m-4 md:m-0 h-[36rem] xl:h-[40rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
                 <img src="/personality.webp" alt="" class="w-48">
                 <h1 class="w-full text-center text-lg font-bold text-[#6241A0] my-6">🧠 Test de Personalidad MBTI</h1>
                 <p class="text-center">
                     No se trata de ser iguales, sino de complementarse. Conoce tu tipo de personalidad según el MBTI y deja que nuestra tecnología te conecte con roommates en Lima que se adapten a tu estilo de vida y respeten tus diferencias.
                 </p>
             </div>
-            <div class="w-full m-4 md:m-0 md:w-56 h-[36rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
+            <div class="w-full m-4 md:m-0 h-[36rem] xl:h-[40rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
                 <img src="/rommie.webp" alt="" class="w-48">
                 <h1 class="w-full text-center text-lg font-bold text-[#6241A0] my-6">🏠 Comparte tu espacio con el roommate ideal</h1>
                 <p class="text-center">
                     ¿Tienes un departamento en Lima y quieres compartirlo? Comparte tu espacio, divide gastos y crea una convivencia positiva en tu propia vivienda.
                 </p>
             </div>
-            <div class="w-full m-4 md:m-0 md:w-56 h-[36rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
+            <div class="w-full m-4 md:m-0 h-[36rem] xl:h-[40rem] bg-white flex flex-col justify-center items-center rounded-lg text-center shadow-lg p-5">
                 <img src="/roommie-2.webp" alt="" class="w-48">
                 <h1 class="w-full text-center text-lg font-bold text-[#6241A0] my-6">🕒 Hábitos</h1>
                 <p class="text-center">
                     ¿Prefieres madrugar, dormir temprano o tener tardes tranquilas? Define tus horarios y rutinas para encontrar roommates en Lima que respeten tu espacio y hagan que la convivencia sea equilibrada y tolerante.
                 </p>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto w-full block justify-center items-center px-8 lg:px-36 mt-28">
+        <div class="w-full h-auto rounded-xl bg-[url('/bg-IA.webp')] bg-cover bg-center">
+            <div class="w-full flex flex-col justify-center items-center py-16 text-white">
+                <h1 class="font-bold text-4xl text-center">¿Como funciona la IA Predictiva?</h1>
+                <p class="w-full px-10 md:w-1/2 text-center mt-8">
+                    Nuestro modelo de Inteligencia Artificial utiliza un test de personalidad MBTI para analizar quién eres y qué tipo de roommate te complementa.
+                    <br><br>Entrenado con datos de más de 900 personas, el modelo logra una precisión del 70% en recomendaciones, asegurando matches pensados para convivencias menos conflictivas.
+                </p>
+                <a class="w-auto flex justify-center items-center my-10 h-auto bg-white text-[#6241A0] shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://wa.me/message/TZKYFTLFYE5OJ1" target="_blank" aria-label="">
+                    Quiero Probarlo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-3" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </a>
+                <img src="wave-ai.gif" alt="" class="p-10">
             </div>
         </div>
     </section>
@@ -278,12 +288,17 @@ import CounterSection from "./bannerCount";
             </div>
         </div>
         <div class="w-full flex justify-center items-center my-12">
-            <a class="w-auto flex justify-center items-center h-auto bg-white text-[#6241A0] shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" aria-label="">
+            <!-- <a class="w-auto flex justify-center items-center h-auto bg-white text-[#6241A0] shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" aria-label="">
                 Regístrate y Encuentra tu Roommate
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-3" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                 </svg>
-            </a>
+            </a> -->
+            <ButtonL
+                text="Regístrate y Encuentra tu Roommate" 
+                href={hrefButton}
+                icon={true} 
+            />
         </div>
     </section>
     <section id="Conócenos" class="container mx-auto block justify-center items-center px-8 lg:px-36 mt-28">
@@ -292,12 +307,17 @@ import CounterSection from "./bannerCount";
             <p class="lg:px-20">En Dommies, sabemos lo complicado que puede ser encontrar un buen roommate en Lima porque lo vivimos en carne propia. Por eso, unimos nuestras experiencias y conocimientos para crear una solución que haga que la convivencia sea más sencilla, segura y positiva, facilitando la búsqueda de roommates en Lima y garantizando la compatibilidad.</p>
         </div>
         <div class="w-full flex justify-center items-center my-12">
-            <a class="w-auto flex justify-center items-center h-auto bg-white text-[#6241A0] shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" aria-label="">
+            <!-- <a class="w-auto flex justify-center items-center h-auto bg-white text-[#6241A0] shadow-lg py-3 px-5 rounded-full hover:scale-105 transition-transform duration-300" href="https://docs.google.com/forms/d/e/1FAIpQLSd4Vwls-Jq53VHIdW-oelFDOPsUYEGybQM2POU8FXFq4hC10w/viewform" target="_blank" aria-label="">
                 Contáctanos
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-3" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                 </svg>
-            </a>
+            </a> -->
+            <ButtonL
+                text="Contáctanos" 
+                href={hrefButton}
+                icon={true} 
+            />
         </div>
         <div class="flex flex-wrap justify-center items-center gap-4 mt-16">
             <div class="w-full m-4 md:m-0 md:w-64 md:h-[55rem] border border-[#6241A0] p-8">
@@ -336,14 +356,14 @@ import CounterSection from "./bannerCount";
             </div>
             <div class="w-full m-4 md:m-0 md:w-64 md:h-[55rem] border border-[#6241A0] p-8">
                 <div class="w-full block justify-center items-center">
-                    <h1 class="text-lg text-[#6241A0] font-bold mb-4 text-center">Ciencias de la computación</h1>
+                    <h1 class="text-lg text-[#6241A0] font-bold mb-4 text-center">Estudiante de Ciencias de la computación</h1>
                     <p class="text-justify">
-                        Me desempeño como Fullstack Developer apasionado por crear soluciones innovadoras y funcionales que marcan la diferencia. Formo parte del equipo detrás de este proyecto, donde aporto mi experiencia en diseño, desarrollo y optimización para garantizar una experiencia de usuario impecable. Me entusiasma transformar ideas en realidad utilizando tecnología de vanguardia y mejores prácticas de desarrollo.
+                        Experiencia en gestión y desarrollo de proyectos de software, apasionado por crear soluciones innovadoras y funcionales que marcan la diferencia. Formo parte del equipo detrás de este proyecto, donde aporto mi experiencia en diseño, desarrollo y optimización para garantizar una experiencia de usuario impecable. Me entusiasma transformar ideas en realidad utilizando tecnología de vanguardia y mejores prácticas de desarrollo.
                     </p>
                 </div>
                 <div class="w-full flex flex-col justify-center items-center mt-5">
                     <div class="w-36">
-                        <img src="/Jose.webp" alt="Foto del COO" class="rounded-full w-36 h-36 object-cover">
+                        <img src="/Jak.webp" alt="Foto del COO" class="rounded-full w-36 h-36 object-cover">
                     </div>
                 </div>
                 <div class="w-full flex flex-col justify-center items-center text-center">
@@ -359,6 +379,15 @@ import CounterSection from "./bannerCount";
         </div>
         <div class="w-full">
             <Accordion client:load/>
+        </div>
+    </section>
+    <section class="w-full container mx-auto block justify-center items-center px-8 lg:px-36 mt-28">
+        <div class="block justify-center items-center text-center">
+            <h1 class="w-full lg:px-24 text-3xl font-bold mb-8 text-center"><span class="text-[#6241A0]">Sé el Primero en acceder</span></h1>
+            <p class="lg:px-20">El lanzamiento OFICIAL de la APP que cambiará cómo encuentras roommies está en camino 🔥</p>
+        </div>
+        <div class="w-full mt-10 flex justify-center items-center p-4">
+            <FormReg/>
         </div>
     </section>
 </div>
