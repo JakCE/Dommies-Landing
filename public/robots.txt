@@ -1,4 +1,7 @@
 User-agent: *
+Disallow: /feed/
+Disallow: /404/
+Disallow: /private/  # Si tienes páginas privadas en el futuro, agrégalas aquí
 Allow: /
 
 Sitemap: https://dommies.pro/sitemap.xml

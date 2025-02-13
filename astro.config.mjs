@@ -9,5 +9,5 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://dommies.pro',
-  integrations: [tailwind(), react(), icon(), sitemap()]
+  integrations: [tailwind(), react(), icon()]
 });
