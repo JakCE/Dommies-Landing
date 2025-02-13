@@ -48,42 +48,32 @@ const Header = () => {
         <button
           className="flex lg:hidden items-center justify-center w-10 h-10 rounded"
           onClick={toggleMenu}
-          aria-label="Toggle Menu"
+          aria-label="Abrir menú"
           aria-expanded={isOpen}
+          aria-controls="menu"
         >
-          <span className="sr-only">Toggle Menu</span>
+          <span className="sr-only">Abrir menú</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`h-6 w-6 transition-transform ${
-              isOpen ? "rotate-180" : ""
-            }`}
+            className={`h-6 w-6 transition-transform ${isOpen ? "rotate-180" : ""}`}
             stroke={isOpen ? "white" : "black"}
             viewBox="0 0 24 24"
           >
             {isOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
 
-        {/* Menú */}
+        {/* Menú de navegación */}
         <nav
+          id="menu"
           className={`fixed top-[64px] left-0 w-full lg:static lg:w-auto ${
             isOpen ? "opacity-100 visible" : "opacity-0 invisible"
           } lg:opacity-100 lg:visible h-[calc(100vh-64px)] lg:h-auto bg-[#6241A0] lg:bg-transparent text-white lg:text-black z-40 transition-opacity duration-300 lg:flex`}
-          role="menu"
+          aria-hidden={!isOpen}
         >
           <ul className="flex flex-col lg:flex-row items-center gap-4 p-4 lg:p-0 h-full lg:h-auto justify-center lg:justify-end lg:text-[#6241A0]">
             {sections.map((section) => (
@@ -91,7 +81,6 @@ const Header = () => {
                 <a
                   href={`#${section.id}`}
                   className={`lg:hover:bg-[#6241A0] lg:hover:text-white font-medium transition px-4 py-2 lg:rounded-full`}
-                  role="menuitem"
                   onClick={closeMenu} // Cierra el menú al hacer clic en móviles
                 >
                   {section.label}
