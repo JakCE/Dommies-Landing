@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{post.data.title} | Blog de Dommies</title>
+</head>
+
+<article class="max-w-3xl mx-auto py-8 text-black">
+  <h1 class="text-4xl font-bold">{post.data.title}</h1>
+  <p class="text-gray-500">{post.data.date} - Escrito por {post.data.author}</p>
+  <img src={post.data.image} alt={post.data.title} class="w-full my-14 rounded-lg" />
+
+  <!-- Renderizar Markdown correctamente con rendered.html -->
+  <div class="prose prose-invert prose-headings:text-black prose-strong:text-black prose-p:text-black max-w-none dark:prose-dark dark:prose-strong:text-white text-black" set:html={post.rendered?.html}></div>
+</article>
