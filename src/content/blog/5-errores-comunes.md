@@ -7,10 +7,8 @@ tags: ["roomies", "alquiler", "Lima", "convivencia"]
 author: "Equipo Dommies"
 ---
 
-# Los 5 errores más comunes al buscar roommates y cómo evitarlos
-
 Buscar un roommate puede ser emocionante, pero también un desafío. Elegir a la persona equivocada puede convertir tu hogar en un campo de batalla, lleno de conflictos y malentendidos. En Dommies, sabemos lo importante que es encontrar a alguien compatible con tu estilo de vida. Por eso, te presentamos los **5 errores más comunes al buscar roommates** y cómo evitarlos para que tu convivencia sea armoniosa y sin problemas.
-
+    
 ## 1️⃣ Error 1: No definir tus preferencias desde el inicio
 **¿Por qué es un error?**  
 Muchas personas comienzan su búsqueda sin tener claro lo que realmente quieren en un roommate. Esto puede llevarte a aceptar a alguien que no comparte tus hábitos, presupuesto o expectativas.

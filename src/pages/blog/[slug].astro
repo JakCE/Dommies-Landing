@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -13,16 +14,12 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 ---
 
-<head>
-  <meta charset="UTF-8" />
-  <title>{post.data.title} | Blog de Dommies</title>
-</head>
+<Layout title={post.data.title} description={post.data.description}>
+  <article class="max-w-3xl mx-auto py-8 text-black dark:text-white">
+    <h1 class="text-4xl font-bold">{post.data.title}</h1>
+    <p class="text-gray-500">{post.data.date} - Escrito por {post.data.author}</p>
+    <img src={post.data.image} alt={post.data.title} class="w-full my-4 rounded-lg" />
 
-<article class="max-w-3xl mx-auto py-8 text-black">
-  <h1 class="text-4xl font-bold">{post.data.title}</h1>
-  <p class="text-gray-500">{post.data.date} - Escrito por {post.data.author}</p>
-  <img src={post.data.image} alt={post.data.title} class="w-full my-14 rounded-lg" />
-
-  <!-- Renderizar Markdown correctamente con rendered.html -->
-  <div class="prose prose-invert prose-headings:text-black prose-strong:text-black prose-p:text-black max-w-none dark:prose-dark dark:prose-strong:text-white text-black" set:html={post.rendered?.html}></div>
-</article>
+    <div class="prose prose-invert prose-headings:text-black prose-strong:text-black prose-p:text-black prose-a:text-purple-800 max-w-none dark:prose-dark dark:prose-strong:text-white dark:prose-a:text-blue-400 text-black" set:html={post.rendered?.html}></div>
+  </article>
+</Layout>

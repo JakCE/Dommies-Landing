@@ -15,14 +15,14 @@ const Accordion = () => {
                 <p className="font-bold">¿Cómo aseguran que mi roommate será compatible conmigo?</p>
                 <p className="">En Dommies, utilizamos un test de personalidad basado en el MBTI (uno de los modelos más reconocidos a nivel mundial) para analizar tus preferencias y estilo de vida. Además, aplicamos filtros avanzados que consideran hábitos, intereses y rutinas. Esto nos permite conectarte con roommates en Lima que no solo respeten tus diferencias, sino que también complementen tu personalidad. ¡Queremos que tu convivencia sea lo más armoniosa posible!</p><br />
                 <p className="font-bold">¿Qué tipo de información puedo ver sobre mi próximo roommate?</p>
-                <p className="">En Dommies, accederás a perfiles completos y detallados que incluyen:
-<ul class="list-disc list-inside space-y-2">
+                <span className="">En Dommies, accederás a perfiles completos y detallados que incluyen:
+<ul className="list-disc list-inside space-y-2">
 <li>Hábitos y horarios (madrugadores, noctámbulos, etc.).</li>
 <li>Preferencias de convivencia (pet friendly, extrovertido, introvertido, etc.).</li>
 <li>Información sobre personalidad (resultados del test MBTI).</li>
 <li>Detalles sobre intereses y estilo de vida.</li> 
 </ul>
-Todo esto está diseñado para que encuentres roommates en Lima que se adapten perfectamente a tus necesidades y expectativas.</p><br />
+Todo esto está diseñado para que encuentres roommates en Lima que se adapten perfectamente a tus necesidades y expectativas.</span><br />
                 <p className="font-bold">¿Los perfiles están verificados?</p>
                 <p className="">¡Sí! En Dommies, la seguridad es una prioridad. Todos los perfiles pasan por un riguroso proceso de verificación para garantizar que la información sea confiable y transparente. Así, puedes tomar decisiones con total confianza y sin sorpresas.</p>
             </div>
@@ -33,12 +33,13 @@ Todo esto está diseñado para que encuentres roommates en Lima que se adapten p
         content: (
             <div className="w-full flex flex-col justify-center items-start">
                 <p className="font-bold">¿Dommies es solo para estudiantes?</p>
-                <p className="">No, Dommies está diseñado para todos los jóvenes que buscan roommates en Lima. Aunque muchos de nuestros usuarios son estudiantes, también es ideal para:
-                <ul class="list-disc list-inside space-y-2">
+                <span className="">No, Dommies está diseñado para todos los jóvenes que buscan roommates en Lima. Aunque muchos de nuestros usuarios son estudiantes, también es ideal para:
+                <ul className="list-disc list-inside space-y-2">
                   <li>Jóvenes profesionales que quieren compartir gastos y encontrar un compañero confiable.  </li>
                   <li>Personas que buscan independizarse y necesitan un roommate compatible.                  </li>
                   <li>Quienes ya tienen un departamento y desean compartirlo con alguien que se ajuste a su estilo de vida.
-                  </li></ul></p><br />
+                  </li>
+                </ul></span><br />
                 <p className="font-bold">¿Puedo usar Dommies si ya tengo un departamento y busco un roommate?</p>
                 <p className="">¡Claro que sí! Dommies es perfecto para quienes ya tienen vivienda en Lima y quieren compartirla con alguien compatible. Ya sea por compañía, para dividir costos o simplemente para hacer más amena la convivencia, nuestra plataforma te ayuda a encontrar al roommate ideal.</p><br />
                 <p className="font-bold">¿Qué pasa si soy muy específico en lo que busco?</p>
